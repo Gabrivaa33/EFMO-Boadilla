@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale: 1.0">
+  <title>Stats Temp. 24/25</title>
+  <style>
+    body {
+      background-color: rgb(245, 255, 255);
+      font-family: Arial, sans-serif; }
+    .container { max-width: 1200px;}
+    table {
+      width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Estadísticas de la temporada 24/25</h1>
+  Nota: Cabe recalcar que los minutos jugados son aproximados, es decir, se supone en estas estadísticas que todos los partidos duraron 90 minutos (los minutos de descuento no se han añadido).
+  <table>
+    <thead>
+    <tr>
+      <th>Jugador</th>
+      <th>Minutos Jugados</th>
+      <th>Goles</th>
+      <th>Asistencias</th>
+    </tr>
+    </thead>
+    <tbody id="tablaEstadisticas"></tbody>
+  </table>
+</div>
+
+<script>
+  // Datos de jugadores con minutos jugados por partido, goles y asistencias
+  const jugadores = [
+    { nombre: "Gabri", minutos: [45, 90, 80, 0, 84, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Álvaro", minutos: [45, 0, 10, 0, 6, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Rafa", minutos: [90, 90, 90, 0, 90, 0, 0], goles: 1, asistencias: 0 },
+    { nombre: "Álvaro G.S.", minutos: [0, 33, 90, 0, 84, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Erik", minutos: [25, 57, 0, 0, 26, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "José An", minutos: [65, 33, 90, 0, 76, 0, 0], goles: 0, asistencias: 1 },
+    { nombre: "Carlos A", minutos: [8, 0, 0, 0, 6, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Carlos H", minutos: [90, 57, 0, 0, 0, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Dani", minutos: [90, 21, 90, 0, 90, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Alvarito", minutos: [90, 57, 90, 0, 76, 0, 0], goles: 1, asistencias: 1 },
+    { nombre: "Sagi", minutos: [55, 57, 90, 0, 64, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Gárate", minutos: [0, 33, 10, 0, 14, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Martín", minutos: [35, 33, 80, 0, 90, 0, 0], goles: 0, asistencias: 1 },
+    { nombre: "Madero", minutos: [82, 90, 90, 0, 64, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Fer", minutos: [90, 90, 70, 0, 90, 0, 0], goles: 5, asistencias: 0 },
+    { nombre: "Adri", minutos: [0, 33, 85, 0, 90, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Mario", minutos: [82, 57, 0, 0, 14, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Jaime", minutos: [0, 0, 0, 0, 0, 0, 0], goles: 0, asistencias: 0 },
+    { nombre: "Elo", minutos: [90, 57, 20, 0, 26, 0, 0], goles: 1, asistencias: 0 },
+    { nombre: "David", minutos: [8, 33, 5, 0, 0, 0, 0], goles: 0, asistencias: 0 },
+  ];
+
+  // Función para mostrar los datos en la tabla
+  function mostrarEstadisticas() {
+    const tabla = document.getElementById("tablaEstadisticas");
+
+    jugadores.forEach(jugador => {
+      const minutosTotales = jugador.minutos.reduce((acc, min) => acc + min, 0);
+
+      const fila = `<tr>
+                <td>${jugador.nombre}</td>
+                <td>${minutosTotales}</td>
+                <td>${jugador.goles}</td>
+                <td>${jugador.asistencias}</td>
+            </tr>`;
+      tabla.innerHTML += fila;
+    });
+  }
+
+  // Mostrar estadísticas al cargar la página
+  window.onload = mostrarEstadisticas;
+</script>
+
+</body>
+</html>
