@@ -125,8 +125,8 @@
 <script>
   // Datos predefinidos para 30 jornadas y 20 jugadores con comentarios
   const jugadores = [
-    { nombre: "Jugador 1"/*Gabri*/, puntos: [8, 3, 10, null, 6, 0, 1, 6, null, null, null, 11, null, null, null], 
-     comentarios: ["↩️ (7,7)", "(6,6)", "🟨↪️ (8,1)", "Descanso", "↪️ (7,2)", "↪️ (6,1)", "↪️ (6,2)", "↪️ (7,3)", "Lesionado", "Lesionado", "Lesionado", "(9,0)", "No convocado", "↪️ ()", "-"] },
+    { nombre: "Jugador 1"/*Gabri*/, puntos: [8, 3, 10, null, 6, 0, 1, 6, null, null, null, 11, null, 7, null], 
+     comentarios: ["↩️ (7,7)", "(6,6)", "🟨↪️ (8,1)", "Descanso", "↪️ (7,2)", "↪️ (6,1)", "↪️ (6,2)", "↪️ (7,3)", "Lesionado", "Lesionado", "Lesionado", "(9,0)", "No convocado", "↪️ (7,4)", "-"] },
     { nombre: "Jugador 2"/*Álvaro*/, puntos: [-2, null, 2, null, 3, 2, 3, null, 6, 4, 2, null, 5, null, null], 
      comentarios: ["↪️ (5,6)", "-", "↩️ (6,5)", "Descanso", "🟨↩️ (6,6)", "↩️ (6,5)", "↩️ (6,6)", "- ↩️", "(7,3)", "(6,8)", "(6,4)", "-", "(7,0)", "↩️ ()", "-"] },
     { nombre: "Jugador 3"/*Rafa*/, puntos: [14, 5, 10, null, 10, 7, 10, 15, 7, 3, 10, 1, null, null, null], 
@@ -147,8 +147,8 @@
      comentarios: ["-", "-", "-", "Descanso", "-", "-", "-", "-", "-", "-", "-", "-", "-", "↩️ ()", "-"] },
     { nombre: "Jugador 11"/*Edu (Cadete)*/, puntos: [null, null, null, null, null, null, null, null, null, null, null, null, -1, null, null], 
      comentarios: ["En el CD", "En el CD", "En el CD", "Descanso", "En el CD", "En el CD", "En el CD", "En el CD", "En el CD", "En el CD", "En el CD", "En el CD", "↩️ (5,9)", "En el CD", "-"] },  
-    { nombre: "Jugador 12"/*Alvarito*/, puntos: [11, 6, 9, null, 2, -1, null, null, 4, 8, 3, 2, 2, null, null], 
-     comentarios: ["🟢 (7,7+🟢)", "↪️ (7,2)", "➡️ (7,6+➡️)", "Descanso", "↪️ (6,4)", "🟨↪️ (5,8)", "Lesionado", "Lesionado", "↩️ (6,9)", "🟨↩️🟢⬆️ (7,0+🟢⬆️)", "(6,7)", "↩️ (6,4)", "(6,5)", "↪️🟢 (+🟢)", "-"] },
+    { nombre: "Jugador 12"/*Alvarito*/, puntos: [11, 6, 9, null, 2, -1, null, null, 4, 8, 3, 2, 2, 9, null], 
+     comentarios: ["🟢 (7,7+🟢)", "↪️ (7,2)", "➡️ (7,6+➡️)", "Descanso", "↪️ (6,4)", "🟨↪️ (5,8)", "Lesionado", "Lesionado", "↩️ (6,9)", "🟨↩️🟢⬆️ (7,0+🟢⬆️)", "(6,7)", "↩️ (6,4)", "(6,5)", "↪️🟢 (7,3+🟢)", "-"] },
     { nombre: "Jugador 13"/*Sagi*/, puntos: [0, 3, 7, null, 1, 0, 5, 5, 1, 3, 1, 4, 10, 5, null], 
      comentarios: ["🟨↪️ (6,1)", "↪️ (6,7)", "(7,4)", "Descanso", "↪️ (6,3)", "(6,1)", "↪️ (7,1)", "↪️ (7,0)", "↪️ (6,2)", "↪️ (6,6)", "↪️ (6,3)", "(6,9)", "🟢 (7,3+🟢)", "↪️ (7,0)", "-"] },
     { nombre: "Jugador 14"/*Gárate*/, puntos: [null, 4, null, null, 2, null, -1, 3, 2, 3, 4, 4, 2, null, null], 
@@ -161,8 +161,8 @@
      comentarios: ["En el CB", "En el CB", "En el CB", "Descanso", "En el CB", "En el CB", "En el CB", "En el CB", "En el CB", "En el CB", "↩️ (6,6)", "En el CB", "En el CB", "En el CB", "-"] },
     { nombre: "Jugador 18"/*Fer*/, puntos: [5, 4, 27, null, 5, 10, 10, 14, 4, null, null, null, null, null, null], 
      comentarios: ["(7,1)", "(6,8)", "↪️🟢⬆️🟢🟢🟢🟢 (10+🟢🟢🟢🟢+🟢⬆️)", "Descanso", "(7,1)", "🟢 (7,4+🟢)", "➡️ (7,8+➡️)", "↪️🟢➡️ (8,4+🟢+➡️)", "↪️➡️ (6,6+➡️)", "Lesionado", "Lesionado", "Lesionado", "Lesionado", "Lesionado", "-"] },
-    { nombre: "Jugador 19"/*Adri*/, puntos: [null, 4, 6, null, 4, 4, 9, 9, null, 7, 1, 4, null, null, null], 
-     comentarios: ["No convocado", "↩️ (6,8)", "↪️ (7,3)", "Descanso", "(6,9)", "(6,8)", "🟨➡️ (7,7+➡️)", "🟨↪️🟢 (7,3+🟢)", "No convocado", "(7,5)", "(6,2)", "↪️ (6,9)", "Lesionado", "↩️ ()", "-"] },
+    { nombre: "Jugador 19"/*Adri*/, puntos: [null, 4, 6, null, 4, 4, 9, 9, null, 7, 1, 4, null, 1, null], 
+     comentarios: ["No convocado", "↩️ (6,8)", "↪️ (7,3)", "Descanso", "(6,9)", "(6,8)", "🟨➡️ (7,7+➡️)", "🟨↪️🟢 (7,3+🟢)", "No convocado", "(7,5)", "(6,2)", "↪️ (6,9)", "Lesionado", "↪️ (6,3)", "-"] },
     { nombre: "Jugador 20"/*Mario*/, puntos: [2, 5, null, null, 1, 3, 3, 4, 3, 4, 1, 4, 0, null, null], 
      comentarios: ["↪️ (6,5)", "↪️ (7,0)", "No convocado", "Descanso", "↩️ (6,3)", "↩️ (6,6)", "↩️ (6,6)", "↩️ (6,8)", "↩️ (6,7)", "↩️ (6,9)", "↪️ (6,2)", "↩️ (6,8)", "(6,0)", "↩️ ()", "-"] },
     { nombre: "Jugador 21"/*Jaime*/, puntos: [null, null, null, null, null, null, null, null, null, null, 0, null, null, null, null], 
