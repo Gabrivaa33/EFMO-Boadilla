@@ -708,7 +708,7 @@
     player.scores.forEach((score, index) => {
       const detailItem = document.createElement('div');
       detailItem.classList.add('detail-item', getScoreColor(score));
-      detailItem.innerHTML = `<span>Jornada ${index + 1}</span><br><span>Puntuación: ${score}</span><br><span>Comentario: ${player.comments[index]}</span>`; // Mostrar la jornada y el comentario
+      detailItem.innerHTML = `<span>J${index + 1}</span> <br> <span>${score === null ? '-' : score}</span> <br> ${player.comments[index]}`; // Mostrar la jornada y el comentario
       playerDetails.appendChild(detailItem);
     });
   }
