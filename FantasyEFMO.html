@@ -105,31 +105,29 @@
     @media (max-width: 768px) {
   .player-stats {
     display: flex;
-    flex-direction: column; /* Cambiar de fila a columna para que se apilen correctamente */
-    align-items: center; /* Centrar los elementos */
+    flex-direction: column; /* Cambiar de fila a columna para apilar los elementos */
+    align-items: center; /* Centrar todos los elementos dentro de .player-stats */
   }
 
-  .player-stats div {
-    width: 100%; /* Hacer que cada div ocupe el 100% del ancho para que se vea más grande */
-    text-align: center; /* Centrar las puntuaciones */
+  .total-points {
+    font-size: 20px; /* Aumentar tamaño de los puntos totales */
+    text-align: center; /* Centrar los puntos totales */
+  }
+
+  .player-name {
+    font-size: 22px; /* Aumentar el tamaño del nombre del jugador */
+    text-align: center; /* Centrar el nombre */
   }
 
   .detail-item {
-    flex-direction: column; /* Asegurar que los detalles estén alineados verticalmente */
-    align-items: flex-start; /* Alinearlos a la izquierda */
+    text-align: left; /* Dejar los detalles alineados a la izquierda, como antes */
+  }
+
+  .detail-item span {
+    font-size: 16px; /* Ajustar el tamaño de la puntuación en los detalles */
   }
 }
 
-   @media (max-width: 768px) {
-  .player-item {
-    padding: 20px; /* Aumentar el espacio dentro de los elementos de los jugadores */
-  }
-
-  .player-details {
-    padding: 15px; /* Aumentar el espacio dentro de la sección de detalles */
-  }
-}
-    
   </style>
 </head>
 <body>
