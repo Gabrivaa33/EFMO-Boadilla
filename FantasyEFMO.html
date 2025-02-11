@@ -102,6 +102,15 @@
       }
     }
 
+    .detail-item {
+  display: block;
+  margin-bottom: 15px;
+  gap: 0;
+  padding: 8px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
   </style>
 </head>
 <body>
@@ -699,7 +708,7 @@
     player.scores.forEach((score, index) => {
       const detailItem = document.createElement('div');
       detailItem.classList.add('detail-item', getScoreColor(score));
-      detailItem.innerHTML = `<span>J${index + 1}</span>  <span>${score === null ? '-' : score}</span>  ${player.comments[index]}`; // Mostrar la jornada y el comentario
+      detailItem.innerHTML = `<span>Jornada ${index + 1}</span><br><span>Puntuación: ${score}</span><br><span>Comentario: ${player.comments[index]}</span>`; // Mostrar la jornada y el comentario
       playerDetails.appendChild(detailItem);
     });
   }
