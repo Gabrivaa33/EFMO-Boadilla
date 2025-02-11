@@ -101,6 +101,34 @@
         font-size: 18px; /* Aumenta el tamaño de los puntos totales y la media */
       }
     }
+
+    @media (max-width: 768px) {
+  .player-stats {
+    display: flex;
+    flex-direction: column; /* Cambiar de fila a columna para que se apilen correctamente */
+    align-items: center; /* Centrar los elementos */
+  }
+
+  .player-stats div {
+    width: 100%; /* Hacer que cada div ocupe el 100% del ancho para que se vea más grande */
+    text-align: center; /* Centrar las puntuaciones */
+  }
+
+  .detail-item {
+    flex-direction: column; /* Asegurar que los detalles estén alineados verticalmente */
+    align-items: flex-start; /* Alinearlos a la izquierda */
+  }
+}
+
+   @media (max-width: 768px) {
+  .player-item {
+    padding: 20px; /* Aumentar el espacio dentro de los elementos de los jugadores */
+  }
+
+  .player-details {
+    padding: 15px; /* Aumentar el espacio dentro de la sección de detalles */
+  }
+}
     
   </style>
 </head>
