@@ -111,6 +111,13 @@
   line-height: 1.5;
 }
 
+  .score-detail {
+  font-size: 24px; /* Tamaño más grande para la puntuación */
+  font-weight: bold;
+  color: #333; /* Puedes cambiar el color si lo prefieres */
+}
+
+    
   </style>
 </head>
 <body>
@@ -708,7 +715,7 @@
     player.scores.forEach((score, index) => {
       const detailItem = document.createElement('div');
       detailItem.classList.add('detail-item', getScoreColor(score));
-      detailItem.innerHTML = `<span>J${index + 1}</span> <br> <span>${score === null ? '-' : score}</span> <br> ${player.comments[index]}`; // Mostrar la jornada y el comentario
+      detailItem.innerHTML = `<span>J${index + 1}</span> <br> <span class="score-detail"> ${score === null ? '-' : score}</span> <br> ${player.comments[index]}`; // Mostrar la jornada y el comentario
       playerDetails.appendChild(detailItem);
     });
   }
