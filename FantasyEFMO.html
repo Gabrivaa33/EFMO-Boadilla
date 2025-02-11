@@ -101,29 +101,29 @@
         font-size: 18px; /* Aumenta el tamaño de los puntos totales y la media */
       }
     }
-
-    @media (max-width: 768px) {
-  /* Contenedor de las puntuaciones para asegurar que no se desordenen */
+    
+@media (max-width: 768px) {
+  /* Contenedor para las puntuaciones */
   .player-stats {
     display: flex;
-    flex-direction: column; /* Cambiamos a columna para apilar los elementos */
-    align-items: center; /* Centra todo en el contenedor */
-    gap: 10px; /* Espacio entre las puntuaciones */
+    justify-content: space-between; /* Alinea las puntuaciones en fila */
+    gap: 10px; /* Ajustamos el espacio entre puntuaciones */
+    flex-wrap: wrap; /* Permite que las puntuaciones se ajusten si no caben en una línea */
+    margin-bottom: 10px; /* Espacio entre las puntuaciones y los comentarios */
   }
 
   /* Puntuaciones individuales */
   .score {
     font-size: 22px; /* Aumenta el tamaño de las puntuaciones en móviles */
+    width: 30%; /* Ajusta el tamaño de cada puntuación para que quepan en la misma fila */
     text-align: center; /* Centra las puntuaciones */
-    width: 50px; /* Mantén un tamaño fijo para las puntuaciones */
   }
 
   /* Comentarios */
   .detail-item {
     font-size: 16px; /* Aumenta el tamaño de los comentarios */
     display: flex;
-    flex-direction: column; /* Apila los comentarios para evitar desbordamiento */
-    align-items: flex-start; /* Alinea los comentarios a la izquierda */
+    justify-content: space-between;
     gap: 5px;
     padding: 8px;
     width: 100%; /* Asegura que los comentarios ocupen todo el ancho disponible */
