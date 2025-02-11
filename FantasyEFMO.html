@@ -102,6 +102,42 @@
       }
     }
 
+    /* Aseguramos que las puntuaciones y comentarios mantengan su posición en móviles */
+@media (max-width: 768px) {
+  /* Contenedor para las puntuaciones y comentarios */
+  .player-stats {
+    display: flex;
+    flex-wrap: wrap; /* Esto permite que los elementos se ajusten de manera flexible */
+    gap: 15px; /* Espacio entre puntuaciones */
+    justify-content: center; /* Centra los elementos */
+  }
+
+  /* Puntuaciones */
+  .score {
+    font-size: 22px; /* Aumenta el tamaño de las puntuaciones en móviles */
+    flex: 1 1 30%; /* Esto asegura que las puntuaciones ocupen un 30% del ancho del contenedor */
+    text-align: center; /* Centra las puntuaciones */
+  }
+
+  /* Comentarios */
+  .detail-item {
+    font-size: 16px; /* Aumenta el tamaño de los comentarios */
+    display: flex;
+    justify-content: space-between; /* Asegura que puntuaciones y comentarios estén alineados */
+    flex-wrap: wrap; /* Asegura que los comentarios no desborden en pantallas pequeñas */
+    gap: 10px;
+  }
+
+  /* Para los nombres y total de puntos */
+  .player-name {
+    font-size: 22px; /* Aumenta el tamaño del nombre del jugador */
+  }
+
+  .total-points {
+    font-size: 18px; /* Aumenta el tamaño de los puntos totales y la media */
+  }
+}
+    
 
   </style>
 </head>
