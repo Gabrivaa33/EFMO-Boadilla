@@ -102,42 +102,44 @@
       }
     }
 
-    /* Aseguramos que las puntuaciones y comentarios mantengan su posición en móviles */
-@media (max-width: 768px) {
-  /* Contenedor para las puntuaciones y comentarios */
+    @media (max-width: 768px) {
+  /* Contenedor de las puntuaciones para asegurar que no se desordenen */
   .player-stats {
     display: flex;
-    flex-wrap: wrap; /* Esto permite que los elementos se ajusten de manera flexible */
-    gap: 15px; /* Espacio entre puntuaciones */
-    justify-content: center; /* Centra los elementos */
+    flex-direction: column; /* Cambiamos a columna para apilar los elementos */
+    align-items: center; /* Centra todo en el contenedor */
+    gap: 10px; /* Espacio entre las puntuaciones */
   }
 
-  /* Puntuaciones */
+  /* Puntuaciones individuales */
   .score {
     font-size: 22px; /* Aumenta el tamaño de las puntuaciones en móviles */
-    flex: 1 1 30%; /* Esto asegura que las puntuaciones ocupen un 30% del ancho del contenedor */
     text-align: center; /* Centra las puntuaciones */
+    width: 50px; /* Mantén un tamaño fijo para las puntuaciones */
   }
 
   /* Comentarios */
   .detail-item {
     font-size: 16px; /* Aumenta el tamaño de los comentarios */
     display: flex;
-    justify-content: space-between; /* Asegura que puntuaciones y comentarios estén alineados */
-    flex-wrap: wrap; /* Asegura que los comentarios no desborden en pantallas pequeñas */
-    gap: 10px;
+    flex-direction: column; /* Apila los comentarios para evitar desbordamiento */
+    align-items: flex-start; /* Alinea los comentarios a la izquierda */
+    gap: 5px;
+    padding: 8px;
+    width: 100%; /* Asegura que los comentarios ocupen todo el ancho disponible */
+    box-sizing: border-box;
   }
 
-  /* Para los nombres y total de puntos */
+  /* Nombre del jugador */
   .player-name {
     font-size: 22px; /* Aumenta el tamaño del nombre del jugador */
   }
 
+  /* Total de puntos */
   .total-points {
     font-size: 18px; /* Aumenta el tamaño de los puntos totales y la media */
   }
 }
-    
 
   </style>
 </head>
