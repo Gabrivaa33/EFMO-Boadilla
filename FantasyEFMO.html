@@ -704,7 +704,7 @@
     const lastThreeScores = player.scores.slice(-3); // Últimas 3 puntuaciones
     lastThreeScores.forEach((score, index) => {
       const scoreDiv = document.createElement('div');
-      scoreDiv.classList.add('score', getScoreColor(score));
+      scoreDiv.classList.add('score', getScoreColor(score), 'score-detail');
       scoreDiv.innerText = score === null ? '-' : score;
       playerStats.appendChild(scoreDiv);
     });
